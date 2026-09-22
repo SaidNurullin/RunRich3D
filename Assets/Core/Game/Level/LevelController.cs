@@ -36,13 +36,17 @@ namespace Game.Level
 
         private void ProcessFinish()
         {
+            Camera.main.transform.parent = null;
             isFinished = true;
             playerController.Finish();
+            UIController.Instance.OpenNextMenu();
         }
 
         private void Lose()
         {
+            Camera.main.transform.parent = null;
             isFinished = true;
+            UIController.Instance.OpenRestartMenu();
         }
     }
 }
