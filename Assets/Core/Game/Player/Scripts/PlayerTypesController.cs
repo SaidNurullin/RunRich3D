@@ -48,6 +48,7 @@ namespace Game.PlayerCharacter
             currentModel.SetActive(true);
 
             string trigger = typesTriggers[_type];
+            Debug.Log(trigger);
             animator.SetTrigger(trigger);
         }
     }
